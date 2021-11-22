@@ -18,9 +18,11 @@ class AddEditNoteActivity : AppCompatActivity() {
     lateinit var saveBtn: Button
 
     // on below line we are creating variable for
+    // on below line we are creating variable for
     // viewmodal and and integer for our note id.
     lateinit var viewModal: NoteViewModal
     var noteID = -1;
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
