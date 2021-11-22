@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="4dp">
 
-        <!--text view for displaying our note text-->
+
         <TextView
             android:id="@+id/idTVNote"
             android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:textColor="@color/white"
             android:textSize="18sp" />
 
-        <!--text view for displaying our last updated text-->
+
         <TextView
             android:id="@+id/idTVDate"
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             android:textColor="@color/white"
             android:textSize="13sp" />
 
-        <!--imageview for displaying delete icon-->
+
         <ImageView
             android:id="@+id/idIVDelete"
             android:layout_width="wrap_content"

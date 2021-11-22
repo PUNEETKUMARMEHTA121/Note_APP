@@ -5,11 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddEditNoteActivity">
-    <!--edit text for note title-->
 
-    <!--edit text for note description-->
-
-    <!--button for saving and updating a note-->
     <EditText
         android:id="@+id/idEdtNoteName"
         android:layout_width="match_parent"
