@@ -9,11 +9,11 @@ interface NotesDao {
 
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert( note :Note)
+     fun insert( note :Note)
 
 
     @Delete
-    suspend fun delete(note: Note)
+     fun delete(note: Note)
 
 
     @Query("Select * from notesTable order by id ASC")
@@ -21,6 +21,6 @@ interface NotesDao {
 
 
     @Update
-    suspend fun update(note: Note)
+    fun update(note: Note)
 
 }

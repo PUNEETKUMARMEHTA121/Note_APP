@@ -12,9 +12,8 @@
         android:id="@+id/notesRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
+        tools:layout_editor_absoluteY="5dp"
         tools:listitem="@layout/note_rv_item" />
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/idFAB"
