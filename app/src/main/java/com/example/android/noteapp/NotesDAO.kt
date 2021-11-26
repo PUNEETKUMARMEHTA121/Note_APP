@@ -5,22 +5,22 @@ import androidx.room.*
 
 // annotation for dao class.
 @Dao
-interface NotesDao {
+abstract class NotesDao {
 
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-     fun insert( note :Note)
+       abstract fun  insert( note :Note)
 
 
     @Delete
-     fun delete(note: Note)
+     abstract fun delete(note: Note)
 
 
     @Query("Select * from notesTable order by id ASC")
-    fun getAllNotes(): LiveData<List<Note>>
+     abstract fun getAllNotes(): LiveData<List<Note>>
 
 
     @Update
-    fun update(note: Note)
+     abstract fun update(note: Note)
 
 }

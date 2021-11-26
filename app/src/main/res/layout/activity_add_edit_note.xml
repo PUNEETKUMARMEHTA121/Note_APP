@@ -11,21 +11,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Enter Note Title"
+        android:layout_marginTop="56dp"
+        android:hint="Enter Title"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/idEdtNoteDesc"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="52dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/idEdtNoteDesc"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="655dp"
         android:layout_above="@id/idBtn"
         android:layout_below="@id/idEdtNoteName"
         android:layout_margin="10dp"
+        android:layout_marginTop="504dp"
         android:background="@color/black_shade_1"
         android:gravity="start|top"
         android:hint="Enter your Note Details"
@@ -33,8 +35,10 @@
         android:singleLine="false"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="3dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtNoteName" />
 
     <Button
         android:id="@+id/idBtn"
@@ -42,14 +46,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
+        android:layout_marginTop="204dp"
         android:background="@drawable/custom_button_back"
         android:text="Button"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/idEdtNoteDesc"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idEdtNoteName"
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintTop_toBottomOf="@+id/idEdtNoteDesc"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
