@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInterface {
@@ -18,9 +20,24 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInt
     lateinit var notesRV: RecyclerView
     lateinit var addFAB: FloatingActionButton
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if(FirebaseAuth.getInstance().currentUser==null)
+        {
+            var intent=Intent(this,LoginActivity::class.java)
+
+            startActivity(intent)
+        finish()
+        }
+        signout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            var intent=Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+            this.finish()
+
+        }
 
 
         notesRV = findViewById(R.id.notesRV)
@@ -52,8 +69,9 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInt
 
             val intent = Intent(this@MainActivity, AddEditNoteActivity::class.java)
             startActivity(intent)
-            this.finish()
+//            this.finish()
         }
+
     }
 
     override fun onNoteClick(note: Note) {
@@ -64,7 +82,7 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInt
         intent.putExtra("noteDescription", note.noteDescription)
         intent.putExtra("noteId", note.id)
         startActivity(intent)
-        this.finish()
+//        this.finish()
     }
 
     override fun onDeleteIconClick(note: Note) {

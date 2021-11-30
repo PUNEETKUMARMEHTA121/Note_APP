@@ -32,6 +32,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:tint="@color/white" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/ic_sign_out"
+        app:backgroundTint="@color/black_shade_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="@+id/notesRV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+
+        app:tint="@color/white" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

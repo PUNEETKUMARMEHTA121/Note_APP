@@ -76,7 +76,7 @@ class AddEditNoteActivity : AppCompatActivity() {
             }
 
             startActivity(Intent(applicationContext, MainActivity::class.java))
-            this.finish()
+//            this.finish()
         }
     }
 }
